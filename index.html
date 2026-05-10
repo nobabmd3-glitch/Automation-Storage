@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Automation Storage Hub</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:#111827;
+    padding:20px;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.container{
+    padding:20px;
+}
+
+.search-box{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+Automation Storage Hub
+</header>
+
+<div class="container">
+
+<input type="text" class="search-box" id="search" placeholder="Search software...">
+
+<div class="grid" id="softwareList">
+
+<div class="card">
+<h2>GX Works 2</h2>
+<p>Mitsubishi PLC Programming Software</p>
+
+<a href="https://drive.google.com/file/d/1Jj43lV3PpFlYKPbxI3BsQgdSsr759aNv/view?usp=drive_link" target="_blank">
+<button>View & Download</button>
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>GT Designer 3</h2>
+<p>GOT / HMI Design Software</p>
+
+<a href="https://t.me/c/3969339745/4" target="_blank">
+<button>Download</button>
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>CX Programmer</h2>
+<p>Omron PLC Software</p>
+
+<a href="https://t.me/yourlink3" target="_blank">
+<button>Download</button>
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>EcoStruxure Machine Expert</h2>
+<p>Schneider PLC Software</p>
+
+<a href="https://t.me/yourlink4" target="_blank">
+<button>Download</button>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const search = document.getElementById('search');
+
+const cards = document.querySelectorAll('.card');
+
+search.addEventListener('keyup', function(){
+
+    const value = search.value.toLowerCase();
+
+    cards.forEach(card => {
+
+        const text = card.innerText.toLowerCase();
+
+        if(text.includes(value)){
+
+            card.style.display = 'block';
+
+        } else {
+
+            card.style.display = 'none';
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
